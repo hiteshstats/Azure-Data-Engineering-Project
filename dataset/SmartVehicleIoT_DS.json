@@ -1,0 +1,42 @@
+{
+	"name": "SmartVehicleIoT_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AmazonS3_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "smartvehicleprojectdata",
+				"folderPath": "IoTData/2023/05/25",
+				"fileName": "IoTData [MConverter.eu].json"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"VehicleID": {
+					"type": "string"
+				},
+				"latitiude": {
+					"type": "number"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"City": {
+					"type": "string"
+				},
+				"temeprature": {
+					"type": "integer"
+				},
+				"speed": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
